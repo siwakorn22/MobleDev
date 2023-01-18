@@ -10,6 +10,7 @@ const app = express();
 const db = require("./models");
 const Role = db.role;
 
+//reset auto
 db.sequelize.sync({ force: true }).then(() => {
   console.log("Drop and Resync database");
   initial();
